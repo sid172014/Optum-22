@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Playfair Display', serif !important;
+  background-image: linear-gradient(
+      to right,
+      rgba(228, 124, 54, 1),
+      rgba(226, 121, 53, 1),
+      rgba(213, 114, 52, 1),
+      rgba(186, 70, 41, 1)
+    ),
+    url("blog2.jpg");
+}
+.heading {
+  /* margin: auto; */
+  /* width: 33%; */
+  text-align: center;
+  font-size: 59px;
+  background-color: yellow;
+  margin: 0px;
+  padding: 0px;
+}
+h3 {
+  margin: 7px;
+  color:white;
+  background: rgb(218,76,25);
+background: linear-gradient(112deg, rgba(218,76,25,1) 0%, rgba(244,92,17,0.8608485630580357) 37%, rgba(255,166,0,1) 100%);
+}
+div.cont {
+  display: flex;
+  margin-top: 3%;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+table {
+  border: 3px solid skyblue;
+  height: 100%;
+  width: 90%;
+}
+td {
+  position: relative;
+  border: 2px solid black;
+  display: block;
+  border-radius: 8px;
+  width: 60%;
+  font-size: 217%;
+  margin: 8% auto;
+  text-align: center;
+  background: rgb(218,173,25);
+background: linear-gradient(124deg, rgba(218,173,25,1) 24%, rgba(244,127,17,0.8608485630580357) 55%, rgba(211,255,0,1) 99%);
+}
+th {
+  /* background-color: tomato; */
+  padding: 14px;
+  border-radius: 6px;
+  width: 20%;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color:whitesmoke;
+  margin: auto;
+  font-size: 50px;
+}
+#pre {
+  background: rgb(218,135,25);
+background: linear-gradient(354deg, rgba(218,135,25,1) 24%, rgba(244,92,17,0.8608485630580357) 55%, rgba(255,166,0,1) 99%);
+  width: 100%;
+  /* margin: 4px; */
+  display: block;
+}
+.remo {
+  background: rgb(218,135,25);
+  background: linear-gradient(124deg, rgba(218,135,25,1) 24%, rgba(244,92,17,0.8608485630580357) 55%, rgba(255,166,0,1) 99%);
+  height: 100%;
+}

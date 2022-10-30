@@ -1,0 +1,374 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<link rel="stylesheet" href="../static/form.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<div class='head'>
+    <section>
+        <div>KidStat</div>
+        <p></p>
+    </section>
+    
+</div>
+<div class='container'>
+    
+    <form method="POST" action='/analyse' role='form'>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Age:</label>
+                <br>
+                <input type="number" name="age" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Blood Pressure (Diastolic) </label>
+                <br>
+                <input type="number" name="bp" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='specGra form-group col-xs-5 col-lg-5'>
+                <label>Specific Gravity
+                    
+                </label>
+                <div class="help-tip">
+                        <p>one of the 5 values: 1.005,1.010,1.015,1.020,1.02 <a href="https://www.ucsfhealth.org/medical-tests/urine-specific-gravity-test#:~:text=Definition,chemical%20particles%20in%20the%20urine." target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="sg" class='form-control'>
+                    <option value="1.005">1.005</option>
+                    <option value="1.010">1.010</option>
+                    <option value="1.015">1.015</option>
+                    <option value="1.020">1.020</option>
+                    <option value="1.025">1.025</option>
+                </select>
+                <!-- <input type="number" step="any" name="sg" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Albumin
+                    
+                </label>
+                <div class="help-tip">
+                        <p>one of the 6 values : 0,1,2,3,4,5 &nbsp;<a href="https://medlineplus.gov/lab-tests/albumin-blood-test/#:~:text=Albumin%20is%20a%20protein%20made,and%20enzymes%20throughout%20your%20body." target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="al" class='form-control'>
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                </select>
+                <!-- <input type="number" name="al" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+
+                <label>Sugar
+                    
+                </label>
+                <div class="help-tip">
+                        <p>one of the 6 values : 0,1,2,3,4,5 &nbsp;<a href="https://medlineplus.gov/bloodsugar.html" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="su" class='form-control'>
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                </select>
+                <!-- <input type="number" name="su" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Red Blood Cells
+                    
+                </label>
+                <div class="help-tip">
+                        <p>normal / abnormal &nbsp;<a href="https://www.urmc.rochester.edu/encyclopedia/content.aspx?ContentID=34&ContentTypeID=160" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="rbc" class='form-control'>
+                    <option value="normal">Normal</option>
+                    <option value="abnormal">Abnormal</option>
+                </select>
+                <!-- <input type="text" name="rbc" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Pus Cells
+                    
+                </label>
+                <div class="help-tip">
+                        <p>normal / abnormal &nbsp;<a href="https://redcliffelabs.com/myhealth/health/pus-cells-in-urine-is-it-normal-what-is-the-normal-range/#:~:text=Pus%20cells%20are%20a%20collection,the%20site%20of%20the%20infection." target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="pc" class='form-control'>
+                    <option value="normal">Normal</option>
+                    <option value="abnormal">Abnormal</option>
+                </select>
+                <!-- <input type="text" name="pc" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Pus Cells Clumps
+                    
+                </label>
+                <div class="help-tip">
+                        <p>present / not-present &nbsp;<a href="https://www.medicalnewstoday.com/articles/321964" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="pcc" class='form-control'>
+                    <option value="present">Present</option>
+                    <option value="notpresent">Not Present</option>
+                </select>
+                <!-- <input type="text" name="pcc" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Bacteria
+                    
+                </label>
+                <div class="help-tip">
+                        <p>present / notpresent &nbsp;<a href="https://www.mayoclinic.org/diseases-conditions/kidney-infection/symptoms-causes/syc-20353387#:~:text=Bacteria%20that%20enter%20the%20urinary,the%20bloodstream%20to%20the%20kidneys." target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="ba" class='form-control'>
+                    <option value="present">Present</option>
+                    <option value="notpresent">Not Present</option>
+                </select>
+                <!-- <input type="text" name="ba" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>BGR
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Also known as Blood Glucose Random &nbsp;<a href="https://www.mayoclinic.org/diseases-conditions/diabetes/diagnosis-treatment/drc-20371451#:~:text=Below%205.7%25%20is%20considered%20normal,)%20%E2%80%94%20or%20higher%20suggests%20diabetes." target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <input type="number" name="bgr" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Blood Urea
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Uring present in blood &nbsp;<a href="https://medlineplus.gov/lab-tests/bun-blood-urea-nitrogen/" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <input type="number" name="bu" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Serum Creatine
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Also known as SCL &nbsp;<a href="https://www.mayoclinic.org/tests-procedures/creatinine-test/about/pac-20384646#:~:text=Serum%20creatinine%20level&text=Serum%20creatinine%20is%20reported%20as,65.4%20to%20119.3%20micromoles%2FL)" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <input type="number" step="any" name="sc" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Sodium
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Amount of sodium in blood &nbsp;<a href="https://medlineplus.gov/lab-tests/sodium-blood-test/" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <input type="number" name="sod" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Potassium
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Amount of Potassium in blood &nbsp;<a href="https://www.nhs.uk/conditions/potassium-test/#:~:text=A%20potassium%20test%20measures%20the,products%20move%20out%20of%20cells" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <input type="number" step="any" name="pot" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>HAEMOGLOBIN
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Amount of HAEMOGLOBIN in blood &nbsp;<a href="https://www.mayoclinic.org/tests-procedures/hemoglobin-test/about/pac-20385075#:~:text=The%20healthy%20range%20for%20hemoglobin,to%2015%20grams%20per%20deciliter" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <input type="number" step="any" name="hemo" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>PCV
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Also known as packed cell volume &nbsp;<a href="https://www.portea.com/labs/diagnostic-tests/packed-cell-volume-test-233/" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <input type="number" name="pcv" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>WBC Count
+                    
+                </label>
+                <div class="help-tip">
+                        <p>White Blood Cells Count &nbsp;<a href="https://www.ucsfhealth.org/en/medical-tests/wbc-count#:~:text=The%20normal%20number%20of%20WBCs,or%20may%20test%20different%20specimens." target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <input type="number" name="wc" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>RBC Count
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Red Blood Cells Count &nbsp;<a href="https://www.nhs.uk/conditions/red-blood-count/#:~:text=A%20normal%20RBC%20count%20would,5.2%20x%2010*12%2FL" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <input type="number" step="any" name="rc" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Hypertension
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Yes / No &nbsp;<a href="https://www.who.int/news-room/fact-sheets/detail/hypertension#:~:text=Hypertension%20%CC%B6%20or%20elevated%20blood,low%2D%20and%20middle%2Dincome%20countries" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="htn" class='form-control'>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- <input type="text" name="htn" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>DIABETES MELLITUS
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Yes / No &nbsp;<a href="https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444#:~:text=Diabetes%20mellitus%20refers%20to%20a,of%20diabetes%20varies%20by%20type." target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="dm" class='form-control'>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- <input type="text" name="dm" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>CAD
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Coronary Artery Disease Yes/No &nbsp;<a href="https://my.clevelandclinic.org/health/diseases/16898-coronary-artery-disease" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="cad" class='form-control'>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- <input type="text" name="cad" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Appetite
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Good / Poor &nbsp;<a href="https://dictionary.cambridge.org/dictionary/english/appetite" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="appet" class='form-control'>
+                    <option value="good">Good</option>
+                    <option value="poor">Poor</option>
+                </select>
+
+                <!-- <input type="text" name="appet" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Pedal Edema
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Yes / No &nbsp;<a href="https://www.medicoverhospitals.in/symptoms/pedal-edema" target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="pe" class='form-control'>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- <input type="text" name="pe" class='form-control'> -->
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albu form-group col-xs-5 col-lg-5'>
+                <label>Anemia
+                    
+                </label>
+                <div class="help-tip">
+                        <p>Yes / No &nbsp;<a href="https://www.mayoclinic.org/diseases-conditions/anemia/symptoms-causes/syc-20351360#:~:text=Anemia%20is%20a%20condition%20in,each%20with%20its%20own%20cause." target="_blank" style="color: white;">more</a></p>
+                </div>
+                <br>
+                <select id="cars" name="ane" class='form-control'>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <!-- <input type="text" name="ane" class='form-control'> -->
+            </div>
+        </div>
+        <div class='button'>
+            <div class='submitbox form-group'>
+                <input type="submit" name="submit" value="SUBMIT" class='btn btn-default'>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

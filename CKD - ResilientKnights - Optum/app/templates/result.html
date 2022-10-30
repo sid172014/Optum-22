@@ -1,0 +1,52 @@
+{% extends 'base1.html' %}
+
+{% block body %}
+<link rel="stylesheet" href="../static/res.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+
+<div class="heading">
+    <h3>Result</h3>
+</div>
+    
+
+<div class='cont'>
+    <table class='table table-bordered table-condensed table-responsive'>
+        <tr id="pre">
+            <th>Prediction</th>
+            <!-- <th>Inference</th> -->
+        </tr>
+        <tr class="remo">
+            <!-- <td id="demo">Patient does not has Chronic Kidney Disease</td> -->
+            <td id="demo">{{ pred }}</td>
+            <!-- <td></td> -->
+        </tr>
+    </table>
+</div>
+<script>
+
+
+    let person=document.getElementById("demo").innerHTML;
+    let element=document.getElementById("demo");
+    if(person==="Patient does not has Chronic Kidney Disease"){
+        element.style.color='green'
+        element.style.cursor='pointer'
+        // element.style.hover.backgroundColor='tomato';
+        console.log('set')
+    }
+    else{
+        element.style.color='red'
+        
+    }
+    </script>
+
+
+{% endblock %}
+
+
+
+
+
+
