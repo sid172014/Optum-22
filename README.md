@@ -15,4 +15,4 @@ KidStat heavily relies on ML algorithms which includes
 7. Random Forest Classifier
 
 
-Installation and Execution Instructions could be found under " CKD - ResilientKnights - Optum/app/instruction.txt "
+Installation and Execution Instructions could be found under " CKD - ResilientKnights - Optum / app / instruction.txt "
