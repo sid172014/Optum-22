@@ -1,6 +1,6 @@
 # KidStat
 
-An application developed by our Team (ResilientKnights) for Optum Stratethon Season 4 , which predicts whether a person has CKD or not with 100% accuracy
+An application developed by our Team (ResilientKnights) for Optum Stratethon Season 4 , which predicts whether a person has CKD with 100% accuracy
 
 ***
 
