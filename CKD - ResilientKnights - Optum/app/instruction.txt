@@ -1,15 +1,21 @@
--> Steps for creating environment for testing the app:
+-> Steps for creating environment for testing and running the app:
 
-> conda create -n test python=3.6.7 pip
 
-> activate test
+For macOS/ Linux use Terminal and for Windows use PowerShell or CMD with conda support
 
-> pip install -r requirements.txt
+Follow the instructions to run the app ---> 
+
+
+-> $conda create -n test python=3.6.7 pip
+
+-> $conda activate test
+
+-> pip install -r requirements.txt
 
 -> To run the app:
 
--> Move to the directory where app.py file is located in conda prompt while the activated environment is "test".
+// Make sure you see a '(test)' flashing right at the start of your path in your terminal/PowerShell/CMD
 
 -> Run 'python app.py' (without quotes)
 
--> Open 'localhost:5000' in the browser to acess the app.
+-> Open 'localhost:5000' in the browser to run the app.
